@@ -78,6 +78,10 @@ strong {
     text-decoration: underline;
 }
 
+.article-info {
+    margin: 2em 0;
+}
+
 
 /* =================
 Layout
@@ -92,28 +96,25 @@ Layout
 .container-flex {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 header {
     background: #f8f8f8;
     padding: 2em 0;
+    text-align: center;
 }
 
-@media (max-width: 675px) {
+@media (min-width: 675px) {
     .container-flex {
-        flex-direction: column;
+        flex-direction: row;
     }
-    header {
-        text-align: center;
+    main {
+        width: 75%;
     }
-}
-
-main {
-    width: 75%;
-}
-
-aside {
-    width: 20%;
+    aside {
+        width: 20%;
+    }
 }
 
 
@@ -157,4 +158,13 @@ nav a:focus {
     nav li {
         margin: .5em 0;
     }
+}
+
+
+/* articles */
+
+.article-featured {
+    border-bottom: #707070 1px solid;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
 }
