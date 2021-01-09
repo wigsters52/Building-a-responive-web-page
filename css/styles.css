@@ -16,6 +16,13 @@ img {
     display: block;
 }
 
+.image-full {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2em;
+}
+
 
 /* =================
 Typography
@@ -33,6 +40,10 @@ h3 {
 h1 {
     font-size: 2rem;
     margin: 0;
+}
+
+h3 {
+    color: #1792d2;
 }
 
 a {
@@ -89,9 +100,12 @@ strong {
 }
 
 .widget-title {
-    font-size: 1rem;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
+}
+
+.widget-recent-post-title {
+    color: #143774;
 }
 
 
@@ -107,8 +121,8 @@ Layout
 
 .container-flex {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
@@ -126,6 +140,9 @@ footer {
 }
 
 @media (min-width: 675px) {
+    header {
+        text-align: left;
+    }
     .container-flex {
         flex-direction: row;
     }
@@ -222,18 +239,12 @@ nav a:focus {
     }
     .article-image {
         order: -2;
-    }
-    .article-info {
-        order: -1;
-    }
-    .article-image {
-        width: 100%;
         min-height: 250px;
         object-fit: cover;
         /* object-position: left; */
     }
-    .wi3 {
-        object-position: left;
+    .article-info {
+        order: -1;
     }
 }
 
